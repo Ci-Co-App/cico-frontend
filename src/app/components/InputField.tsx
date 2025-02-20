@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface InputFieldProps {
   type: string;
@@ -9,7 +9,14 @@ interface InputFieldProps {
   required?: boolean;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, name, placeholder, value, onChange, required }) => {
+const InputField: React.FC<InputFieldProps> = ({
+  type,
+  name,
+  placeholder,
+  value,
+  onChange,
+  required,
+}) => {
   return (
     <div className="w-full">
       <input
