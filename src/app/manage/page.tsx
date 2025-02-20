@@ -116,7 +116,7 @@ const EmployeeManagement: React.FC = () => {
     try {
       const token = localStorage.getItem('token');
       const employeeToAdd = { ...newEmployee, password: '****' };
-      await axios.post('http://localhost:3004/api/cico/admin/add-employee', employeeToAdd, {
+      await axios.post(`${configDev.admin}/add-employee`, employeeToAdd, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSnackbarMessage('Employee added successfully');
